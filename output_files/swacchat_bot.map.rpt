@@ -1,5 +1,5 @@
 Analysis & Synthesis report for swacchat_bot
-Mon Jan 23 18:02:18 2023
+Mon Jan 23 17:01:48 2023
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -47,13 +47,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jan 23 18:02:18 2023       ;
+; Analysis & Synthesis Status        ; Successful - Mon Jan 23 17:01:48 2023       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; swacchat_bot                                ;
 ; Top-level Entity Name              ; ir_test                                     ;
 ; Family                             ; Cyclone IV E                                ;
 ; Total logic elements               ; 58                                          ;
-;     Total combinational functions  ; 55                                          ;
+;     Total combinational functions  ; 57                                          ;
 ;     Dedicated logic registers      ; 28                                          ;
 ; Total registers                    ; 28                                          ;
 ; Total pins                         ; 8                                           ;
@@ -163,19 +163,18 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-14        ;   0.0%      ;
+;     Processors 2-14        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                 ;
-+----------------------------------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                         ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                           ; Library ;
-+----------------------------------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------+---------+
-; ../e_yantra/eyrc_SB_1578/Code/Task2/Task2A/adc_control.v ; yes             ; User Verilog HDL File  ; C:/Users/Hemath Gaddey/Documents/e_yantra/eyrc_SB_1578/Code/Task2/Task2A/adc_control.v ;         ;
-; ir_test.v                                                ; yes             ; User Verilog HDL File  ; C:/Users/Hemath Gaddey/Documents/Task4_eyantra/ir_test.v                               ;         ;
-+----------------------------------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                 ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
+; adc_control.v                    ; yes             ; User Verilog HDL File  ; C:/Users/Hemath Gaddey/Documents/Task4_eyantra/adc_control.v ;         ;
+; ir_test.v                        ; yes             ; User Verilog HDL File  ; C:/Users/Hemath Gaddey/Documents/Task4_eyantra/ir_test.v     ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------------------+
@@ -185,14 +184,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------------------+
 ; Estimated Total logic elements              ; 58                         ;
 ;                                             ;                            ;
-; Total combinational functions               ; 55                         ;
+; Total combinational functions               ; 57                         ;
 ; Logic element usage by number of LUT inputs ;                            ;
 ;     -- 4 input functions                    ; 21                         ;
 ;     -- 3 input functions                    ; 6                          ;
-;     -- <=2 input functions                  ; 28                         ;
+;     -- <=2 input functions                  ; 30                         ;
 ;                                             ;                            ;
 ; Logic elements by mode                      ;                            ;
-;     -- normal mode                          ; 33                         ;
+;     -- normal mode                          ; 35                         ;
 ;     -- arithmetic mode                      ; 22                         ;
 ;                                             ;                            ;
 ; Total registers                             ; 28                         ;
@@ -205,8 +204,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                            ;
 ; Maximum fan-out node                        ; adc_control:ac|adc_clk_reg ;
 ; Maximum fan-out                             ; 22                         ;
-; Total fan-out                               ; 225                        ;
-; Average fan-out                             ; 2.27                       ;
+; Total fan-out                               ; 227                        ;
+; Average fan-out                             ; 2.25                       ;
 +---------------------------------------------+----------------------------+
 
 
@@ -215,7 +214,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name     ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+-------------+--------------+
-; |ir_test                   ; 55 (0)              ; 28 (3)                    ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |ir_test                ; ir_test     ; work         ;
+; |ir_test                   ; 57 (2)              ; 28 (3)                    ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |ir_test                ; ir_test     ; work         ;
 ;    |adc_control:ac|        ; 55 (55)             ; 25 (25)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ir_test|adc_control:ac ; adc_control ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -315,17 +314,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; boundary_port         ; 8                           ;
 ; cycloneiii_ff         ; 28                          ;
 ;     plain             ; 28                          ;
-; cycloneiii_lcell_comb ; 56                          ;
+; cycloneiii_lcell_comb ; 58                          ;
 ;     arith             ; 22                          ;
 ;         2 data inputs ; 22                          ;
-;     normal            ; 34                          ;
-;         1 data inputs ; 4                           ;
+;     normal            ; 36                          ;
+;         1 data inputs ; 6                           ;
 ;         2 data inputs ; 3                           ;
 ;         3 data inputs ; 6                           ;
 ;         4 data inputs ; 21                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 3.53                        ;
+; Average LUT depth     ; 3.48                        ;
 +-----------------------+-----------------------------+
 
 
@@ -334,7 +333,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -344,18 +343,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Mon Jan 23 18:02:07 2023
+    Info: Processing started: Mon Jan 23 17:01:37 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off swacchat_bot -c swacchat_bot
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /users/hemath gaddey/documents/e_yantra/eyrc_sb_1578/code/task2/task2a/adc_control.v
-    Info (12023): Found entity 1: adc_control File: C:/Users/Hemath Gaddey/Documents/e_yantra/eyrc_SB_1578/Code/Task2/Task2A/adc_control.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file adc_control.v
+    Info (12023): Found entity 1: adc_control File: C:/Users/Hemath Gaddey/Documents/Task4_eyantra/adc_control.v Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file ir_test.v
     Info (12023): Found entity 1: ir_test File: C:/Users/Hemath Gaddey/Documents/Task4_eyantra/ir_test.v Line: 1
 Info (12127): Elaborating entity "ir_test" for the top level hierarchy
-Info (12128): Elaborating entity "adc_control" for hierarchy "adc_control:ac" File: C:/Users/Hemath Gaddey/Documents/Task4_eyantra/ir_test.v Line: 66
-Warning (10036): Verilog HDL or VHDL warning at adc_control.v(41): object "dout_reg" assigned a value but never read File: C:/Users/Hemath Gaddey/Documents/e_yantra/eyrc_SB_1578/Code/Task2/Task2A/adc_control.v Line: 41
-Warning (10034): Output port "data_frame" at adc_control.v(32) has no driver File: C:/Users/Hemath Gaddey/Documents/e_yantra/eyrc_SB_1578/Code/Task2/Task2A/adc_control.v Line: 32
+Info (12128): Elaborating entity "adc_control" for hierarchy "adc_control:ac" File: C:/Users/Hemath Gaddey/Documents/Task4_eyantra/ir_test.v Line: 30
+Warning (10036): Verilog HDL or VHDL warning at adc_control.v(41): object "dout_reg" assigned a value but never read File: C:/Users/Hemath Gaddey/Documents/Task4_eyantra/adc_control.v Line: 41
+Warning (10034): Output port "data_frame" at adc_control.v(32) has no driver File: C:/Users/Hemath Gaddey/Documents/Task4_eyantra/adc_control.v Line: 32
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 44 registers lost all their fanouts during netlist optimizations.
@@ -366,9 +365,9 @@ Info (21057): Implemented 66 device resources after synthesis - the final resour
     Info (21059): Implemented 6 output pins
     Info (21061): Implemented 58 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4852 megabytes
-    Info: Processing ended: Mon Jan 23 18:02:18 2023
+    Info: Peak virtual memory: 4827 megabytes
+    Info: Processing ended: Mon Jan 23 17:01:48 2023
     Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Total CPU time (on all processors): 00:00:10
 
 
