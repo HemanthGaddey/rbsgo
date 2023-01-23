@@ -1,0 +1,5 @@
+module irled(
+	input ir1,
+	input ir2,
+	input ir3,
+	output 

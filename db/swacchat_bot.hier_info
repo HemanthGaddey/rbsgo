@@ -1,0 +1,73 @@
+|ir_test
+clk_50_ => clk_50_.IN1
+dout_ => dout_.IN1
+adc_cs_n_ <= adc_control:ac.adc_cs_n
+din_ <= adc_control:ac.din
+adc_sck_ <= adc_control:ac.adc_sck
+led1_ <= led1.DB_MAX_OUTPUT_PORT_TYPE
+led2_ <= led2.DB_MAX_OUTPUT_PORT_TYPE
+led3_ <= led3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ir_test|adc_control:ac
+clk_50 => counter[0].CLK
+clk_50 => counter[1].CLK
+clk_50 => counter[2].CLK
+clk_50 => counter[3].CLK
+clk_50 => adc_clk_reg.CLK
+dout => data.DATAB
+dout => data.DATAB
+dout => data.DATAB
+dout => data.DATAB
+dout => data.DATAB
+dout => data.DATAB
+dout => data.DATAB
+dout => data.DATAB
+dout => data.DATAB
+dout => data.DATAB
+dout => data.DATAB
+dout => data.DATAB
+dout => data.DATAB
+adc_cs_n <= csn.DB_MAX_OUTPUT_PORT_TYPE
+din <= din_reg.DB_MAX_OUTPUT_PORT_TYPE
+adc_sck <= adc_clk_reg.DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch5[0] <= data5[0].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch5[1] <= data5[1].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch5[2] <= data5[2].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch5[3] <= data5[3].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch5[4] <= data5[4].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch5[5] <= data5[5].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch5[6] <= data5[6].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch5[7] <= data5[7].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch5[8] <= data5[8].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch5[9] <= data5[9].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch5[10] <= data5[10].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch5[11] <= data5[11].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch6[0] <= data6[0].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch6[1] <= data6[1].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch6[2] <= data6[2].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch6[3] <= data6[3].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch6[4] <= data6[4].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch6[5] <= data6[5].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch6[6] <= data6[6].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch6[7] <= data6[7].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch6[8] <= data6[8].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch6[9] <= data6[9].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch6[10] <= data6[10].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch6[11] <= data6[11].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch7[0] <= data7[0].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch7[1] <= data7[1].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch7[2] <= data7[2].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch7[3] <= data7[3].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch7[4] <= data7[4].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch7[5] <= data7[5].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch7[6] <= data7[6].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch7[7] <= data7[7].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch7[8] <= data7[8].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch7[9] <= data7[9].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch7[10] <= data7[10].DB_MAX_OUTPUT_PORT_TYPE
+d_out_ch7[11] <= data7[11].DB_MAX_OUTPUT_PORT_TYPE
+data_frame[0] <= <GND>
+data_frame[1] <= <GND>
+
+
