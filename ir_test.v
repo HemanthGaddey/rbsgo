@@ -4,6 +4,7 @@ module ir_test(
 	output adc_cs_n_,
 	output din_,
 	output adc_sck_,
+	output tx_,
 	
 	output led1_,
 	output led2_,
@@ -39,6 +40,18 @@ module ir_test(
 		.d_out_ch7(ir3)
 	);
 	
+	wire ready_;
+	wire start_ = 1;
+	wire [31:0]data;
+	reg [31:0]data_ = 32'b00110011001100110110100101110110;
+	assign data = data_;
+	uart xbee(
+		.clk_50M(ckl_50_),
+		.data(data),
+		.start(start_),
+		.tx(tx_),
+		.ready(ready_)
+	);
 	
 	always @ (posedge clk_50_)	begin
 		led1 <= ir1[0];
