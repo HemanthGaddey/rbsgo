@@ -7,16 +7,26 @@ module ir_test(
 	
 	output led1_,
 	output led2_,
-	output led3_
+	output led3_,
+	output led4_,
+	output led5_,
+	output led6_,
+	output led7_,
+	output led8_
 	);
 	
-	reg led1,led2,led3;
+	reg led1,led2,led3,led4,led5,led6,led7,led8;
 	wire [11:0]ir1;
 	wire [11:0]ir2;
 	wire [11:0]ir3;
 	assign led1_ = led1;
 	assign led2_ = led2;
 	assign led3_ = led3;
+	assign led4_ = led4;
+	assign led5_ = led5;
+	assign led6_ = led6;
+	assign led7_ = led7;
+	assign led8_ = led8;
 	
 	adc_control ac(
 		.clk_50(clk_50_),
@@ -31,20 +41,14 @@ module ir_test(
 	
 	
 	always @ (posedge clk_50_)	begin
-		if(ir1 > 12'b011111111111)
-			led1 <= 1'b1;
-		else
-			led1 <= 1'b0;
-		
-		if(ir2 > 12'b011111111111)
-			led2 <= 1'b0;
-		else
-			led2 <= 1'b1;
-		
-		if(ir3 > 12'b011111111111)
-			led3 <= 1'b0;
-		else
-			led3 <= 1'b1;
+		led1 <= ir1[0];
+		led2 <= ir1[1];
+		led3 <= ir1[2];
+		led4 <= ir1[3];
+		led5 <= ir1[4];
+		led6 <= ir1[5];
+		led7 <= ir1[6];
+		led8 <= ir1[7];
 	end
 	
 	endmodule

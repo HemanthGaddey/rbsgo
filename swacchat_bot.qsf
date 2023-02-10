@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE22F17C6
-set_global_assignment -name TOP_LEVEL_ENTITY uart
+set_global_assignment -name TOP_LEVEL_ENTITY ir_test
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 19.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:59:31  JANUARY 22, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "19.1.0 Lite Edition"
@@ -50,10 +50,23 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name VERILOG_FILE uart.v
+set_global_assignment -name VERILOG_FILE ir_test.v
+set_global_assignment -name VERILOG_FILE adc_control.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_location_assignment PIN_R8 -to clk_50M
-set_location_assignment PIN_B7 -to tx
+set_location_assignment PIN_R8 -to clk_50_
+set_location_assignment PIN_L3 -to led8_
+set_location_assignment PIN_B1 -to led7_
+set_location_assignment PIN_F3 -to led6_
+set_location_assignment PIN_D1 -to led5_
+set_location_assignment PIN_A11 -to led4_
+set_location_assignment PIN_B13 -to led3_
+set_location_assignment PIN_A13 -to led2_
+set_location_assignment PIN_A15 -to led1_
+set_location_assignment PIN_A10 -to adc_cs_n_
+set_location_assignment PIN_B14 -to adc_sck_
+set_location_assignment PIN_B10 -to din_
+set_location_assignment PIN_A9 -to dout_
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_instance_assignment -name IO_STANDARD "2.5 V" -to adc_cs_n_

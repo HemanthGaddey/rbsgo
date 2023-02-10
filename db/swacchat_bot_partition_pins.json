@@ -4,11 +4,55 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "tx",
+					"name" : "adc_cs_n_",
 					"strict" : false
 				},
 				{
-					"name" : "clk_50M",
+					"name" : "din_",
+					"strict" : false
+				},
+				{
+					"name" : "adc_sck_",
+					"strict" : false
+				},
+				{
+					"name" : "led1_",
+					"strict" : false
+				},
+				{
+					"name" : "led2_",
+					"strict" : false
+				},
+				{
+					"name" : "led3_",
+					"strict" : false
+				},
+				{
+					"name" : "led4_",
+					"strict" : false
+				},
+				{
+					"name" : "led5_",
+					"strict" : false
+				},
+				{
+					"name" : "led6_",
+					"strict" : false
+				},
+				{
+					"name" : "led7_",
+					"strict" : false
+				},
+				{
+					"name" : "led8_",
+					"strict" : false
+				},
+				{
+					"name" : "clk_50_",
+					"strict" : false
+				},
+				{
+					"name" : "dout_",
 					"strict" : false
 				}
 			]
