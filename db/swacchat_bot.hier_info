@@ -1,18 +1,18 @@
 |ir_test
 clk_50_ => clk_50_.IN1
 dout_ => dout_.IN1
-adc_cs_n_ << adc_control:ac.adc_cs_n
-din_ << adc_control:ac.din
-adc_sck_ << adc_control:ac.adc_sck
-tx_ << uart:xbee.tx
-led1_ << led1.DB_MAX_OUTPUT_PORT_TYPE
-led2_ << led2.DB_MAX_OUTPUT_PORT_TYPE
-led3_ << led3.DB_MAX_OUTPUT_PORT_TYPE
-led4_ << led4.DB_MAX_OUTPUT_PORT_TYPE
-led5_ << led5.DB_MAX_OUTPUT_PORT_TYPE
-led6_ << led6.DB_MAX_OUTPUT_PORT_TYPE
-led7_ << led7.DB_MAX_OUTPUT_PORT_TYPE
-led8_ << led8.DB_MAX_OUTPUT_PORT_TYPE
+adc_cs_n_ <= adc_control:ac.adc_cs_n
+din_ <= adc_control:ac.din
+adc_sck_ <= adc_control:ac.adc_sck
+tx_ <= uart:xbee.tx
+led1_ <= led1.DB_MAX_OUTPUT_PORT_TYPE
+led2_ <= led2.DB_MAX_OUTPUT_PORT_TYPE
+led3_ <= led3.DB_MAX_OUTPUT_PORT_TYPE
+led4_ <= led4.DB_MAX_OUTPUT_PORT_TYPE
+led5_ <= led5.DB_MAX_OUTPUT_PORT_TYPE
+led6_ <= led6.DB_MAX_OUTPUT_PORT_TYPE
+led7_ <= led7.DB_MAX_OUTPUT_PORT_TYPE
+led8_ <= led8.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ir_test|adc_control:ac
@@ -88,6 +88,8 @@ clk_50M => baud_counter[5].CLK
 clk_50M => baud_counter[6].CLK
 clk_50M => baud_counter[7].CLK
 clk_50M => baud_counter[8].CLK
+tx <= tx_reg.DB_MAX_OUTPUT_PORT_TYPE
+ready <= ready~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data[0] => s.DATAB
 data[1] => s.DATAB
 data[2] => s.DATAB
@@ -156,7 +158,5 @@ start => s.OUTPUTSELECT
 start => s.OUTPUTSELECT
 start => s.OUTPUTSELECT
 start => s.OUTPUTSELECT
-tx <= tx_reg.DB_MAX_OUTPUT_PORT_TYPE
-ready <= ready~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

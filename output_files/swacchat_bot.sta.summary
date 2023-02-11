@@ -3,62 +3,94 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'adc_control:ac|adc_clk_reg'
-Slack : -2.652
-TNS   : -61.698
+Slack : -2.709
+TNS   : -84.051
 
 Type  : Slow 1200mV 85C Model Setup 'clk_50_'
-Slack : -1.352
-TNS   : -6.237
+Slack : -2.056
+TNS   : -14.486
+
+Type  : Slow 1200mV 85C Model Setup 'uart:xbee|baud_clk'
+Slack : -1.651
+TNS   : -56.506
 
 Type  : Slow 1200mV 85C Model Hold 'adc_control:ac|adc_clk_reg'
 Slack : 0.341
 TNS   : 0.000
 
+Type  : Slow 1200mV 85C Model Hold 'uart:xbee|baud_clk'
+Slack : 0.342
+TNS   : 0.000
+
 Type  : Slow 1200mV 85C Model Hold 'clk_50_'
-Slack : 0.356
+Slack : 0.357
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_50_'
 Slack : -3.000
-TNS   : -16.000
+TNS   : -19.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'uart:xbee|baud_clk'
+Slack : -1.000
+TNS   : -42.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'adc_control:ac|adc_clk_reg'
 Slack : -1.000
-TNS   : -32.000
+TNS   : -40.000
 
 Type  : Slow 1200mV 0C Model Setup 'adc_control:ac|adc_clk_reg'
-Slack : -2.263
-TNS   : -52.334
+Slack : -2.337
+TNS   : -71.867
 
 Type  : Slow 1200mV 0C Model Setup 'clk_50_'
-Slack : -1.099
-TNS   : -4.530
+Slack : -1.770
+TNS   : -11.266
+
+Type  : Slow 1200mV 0C Model Setup 'uart:xbee|baud_clk'
+Slack : -1.383
+TNS   : -46.512
 
 Type  : Slow 1200mV 0C Model Hold 'adc_control:ac|adc_clk_reg'
 Slack : 0.298
 TNS   : 0.000
 
+Type  : Slow 1200mV 0C Model Hold 'uart:xbee|baud_clk'
+Slack : 0.299
+TNS   : 0.000
+
 Type  : Slow 1200mV 0C Model Hold 'clk_50_'
-Slack : 0.311
+Slack : 0.312
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_50_'
 Slack : -3.000
-TNS   : -16.000
+TNS   : -19.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'uart:xbee|baud_clk'
+Slack : -1.000
+TNS   : -42.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'adc_control:ac|adc_clk_reg'
 Slack : -1.000
-TNS   : -32.000
+TNS   : -40.000
 
 Type  : Fast 1200mV 0C Model Setup 'adc_control:ac|adc_clk_reg'
-Slack : -1.001
-TNS   : -19.772
+Slack : -1.080
+TNS   : -29.293
 
 Type  : Fast 1200mV 0C Model Setup 'clk_50_'
-Slack : -0.321
-TNS   : -1.922
+Slack : -0.764
+TNS   : -2.905
+
+Type  : Fast 1200mV 0C Model Setup 'uart:xbee|baud_clk'
+Slack : -0.494
+TNS   : -13.925
 
 Type  : Fast 1200mV 0C Model Hold 'adc_control:ac|adc_clk_reg'
+Slack : 0.175
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'uart:xbee|baud_clk'
 Slack : 0.176
 TNS   : 0.000
 
@@ -68,10 +100,14 @@ TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_50_'
 Slack : -3.000
-TNS   : -17.117
+TNS   : -20.537
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'uart:xbee|baud_clk'
+Slack : -1.000
+TNS   : -42.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'adc_control:ac|adc_clk_reg'
 Slack : -1.000
-TNS   : -32.000
+TNS   : -40.000
 
 ------------------------------------------------------------

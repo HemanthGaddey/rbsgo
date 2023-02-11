@@ -1,5 +1,5 @@
 Analysis & Synthesis report for swacchat_bot
-Fri Feb 10 20:56:43 2023
+Fri Feb 10 23:05:26 2023
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -15,9 +15,9 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |ir_test|uart:xbee|state
   9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Inverted Register Statistics
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
  13. Port Connectivity Checks: "uart:xbee"
  14. Port Connectivity Checks: "adc_control:ac"
  15. Post-Synthesis Netlist Statistics for Top Partition
@@ -49,15 +49,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Feb 10 20:56:43 2023       ;
+; Analysis & Synthesis Status        ; Successful - Fri Feb 10 23:05:26 2023       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; swacchat_bot                                ;
 ; Top-level Entity Name              ; ir_test                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 80                                          ;
-;     Total combinational functions  ; 64                                          ;
-;     Dedicated logic registers      ; 45                                          ;
-; Total registers                    ; 45                                          ;
+; Total logic elements               ; 154                                         ;
+;     Total combinational functions  ; 142                                         ;
+;     Dedicated logic registers      ; 98                                          ;
+; Total registers                    ; 98                                          ;
 ; Total pins                         ; 14                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -157,60 +157,60 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 20          ;
-; Maximum allowed            ; 14          ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 14          ;
+; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processors 3-14        ;   0.0%      ;
+;     Processors 3-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                               ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                 ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
-; uart.v                           ; yes             ; User Verilog HDL File  ; C:/Users/Hemath Gaddey/Documents/Task4_eyantra/uart.v        ;         ;
-; ir_test.v                        ; yes             ; User Verilog HDL File  ; C:/Users/Hemath Gaddey/Documents/Task4_eyantra/ir_test.v     ;         ;
-; adc_control.v                    ; yes             ; User Verilog HDL File  ; C:/Users/Hemath Gaddey/Documents/Task4_eyantra/adc_control.v ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                              ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------+---------+
+; ir_test.v                        ; yes             ; User Verilog HDL File  ; C:/Users/divya/OneDrive/Documents/hemanth_task4_eyamtra/rbsgo/ir_test.v     ;         ;
+; adc_control.v                    ; yes             ; User Verilog HDL File  ; C:/Users/divya/OneDrive/Documents/hemanth_task4_eyamtra/rbsgo/adc_control.v ;         ;
+; uart.v                           ; yes             ; User Verilog HDL File  ; C:/Users/divya/OneDrive/Documents/hemanth_task4_eyamtra/rbsgo/uart.v        ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                              ;
-+---------------------------------------------+----------------------------+
-; Resource                                    ; Usage                      ;
-+---------------------------------------------+----------------------------+
-; Estimated Total logic elements              ; 80                         ;
-;                                             ;                            ;
-; Total combinational functions               ; 64                         ;
-; Logic element usage by number of LUT inputs ;                            ;
-;     -- 4 input functions                    ; 26                         ;
-;     -- 3 input functions                    ; 10                         ;
-;     -- <=2 input functions                  ; 28                         ;
-;                                             ;                            ;
-; Logic elements by mode                      ;                            ;
-;     -- normal mode                          ; 42                         ;
-;     -- arithmetic mode                      ; 22                         ;
-;                                             ;                            ;
-; Total registers                             ; 45                         ;
-;     -- Dedicated logic registers            ; 45                         ;
-;     -- I/O registers                        ; 0                          ;
-;                                             ;                            ;
-; I/O pins                                    ; 14                         ;
-;                                             ;                            ;
-; Embedded Multiplier 9-bit elements          ; 0                          ;
-;                                             ;                            ;
-; Maximum fan-out node                        ; adc_control:ac|adc_clk_reg ;
-; Maximum fan-out                             ; 34                         ;
-; Total fan-out                               ; 310                        ;
-; Average fan-out                             ; 2.26                       ;
-+---------------------------------------------+----------------------------+
++------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                      ;
++---------------------------------------------+--------------------+
+; Resource                                    ; Usage              ;
++---------------------------------------------+--------------------+
+; Estimated Total logic elements              ; 154                ;
+;                                             ;                    ;
+; Total combinational functions               ; 142                ;
+; Logic element usage by number of LUT inputs ;                    ;
+;     -- 4 input functions                    ; 52                 ;
+;     -- 3 input functions                    ; 28                 ;
+;     -- <=2 input functions                  ; 62                 ;
+;                                             ;                    ;
+; Logic elements by mode                      ;                    ;
+;     -- normal mode                          ; 112                ;
+;     -- arithmetic mode                      ; 30                 ;
+;                                             ;                    ;
+; Total registers                             ; 98                 ;
+;     -- Dedicated logic registers            ; 98                 ;
+;     -- I/O registers                        ; 0                  ;
+;                                             ;                    ;
+; I/O pins                                    ; 14                 ;
+;                                             ;                    ;
+; Embedded Multiplier 9-bit elements          ; 0                  ;
+;                                             ;                    ;
+; Maximum fan-out node                        ; uart:xbee|baud_clk ;
+; Maximum fan-out                             ; 43                 ;
+; Total fan-out                               ; 677                ;
+; Average fan-out                             ; 2.53               ;
++---------------------------------------------+--------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -218,8 +218,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name     ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+-------------+--------------+
-; |ir_test                   ; 64 (0)              ; 45 (8)                    ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |ir_test                ; ir_test     ; work         ;
-;    |adc_control:ac|        ; 64 (64)             ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ir_test|adc_control:ac ; adc_control ; work         ;
+; |ir_test                   ; 142 (4)             ; 98 (1)                    ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |ir_test                ; ir_test     ; work         ;
+;    |adc_control:ac|        ; 68 (68)             ; 45 (45)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ir_test|adc_control:ac ; adc_control ; work         ;
+;    |uart:xbee|             ; 70 (70)             ; 52 (52)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ir_test|uart:xbee      ; uart        ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -236,62 +237,22 @@ Encoding Type:  One-Hot
 +----------+----------+----------+----------+
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; uart:xbee|baud_clk                     ; Stuck at GND due to stuck port clock   ;
-; uart:xbee|baud_counter[0..8]           ; Stuck at GND due to stuck port clock   ;
-; uart:xbee|s[2]                         ; Stuck at GND due to stuck port clock   ;
-; uart:xbee|s[0,1]                       ; Stuck at VCC due to stuck port clock   ;
-; uart:xbee|s[3]                         ; Stuck at GND due to stuck port clock   ;
-; uart:xbee|s[4]                         ; Stuck at VCC due to stuck port clock   ;
-; uart:xbee|s[5]                         ; Stuck at GND due to stuck port clock   ;
-; uart:xbee|s[6]                         ; Stuck at VCC due to stuck port clock   ;
-; uart:xbee|s[7,8]                       ; Stuck at GND due to stuck port clock   ;
-; uart:xbee|s[9]                         ; Stuck at VCC due to stuck port clock   ;
-; uart:xbee|s[10..13]                    ; Stuck at GND due to stuck port clock   ;
-; uart:xbee|s[14]                        ; Stuck at VCC due to stuck port clock   ;
-; uart:xbee|s[15]                        ; Stuck at GND due to stuck port clock   ;
-; uart:xbee|s[16..18]                    ; Stuck at VCC due to stuck port clock   ;
-; uart:xbee|s[19]                        ; Stuck at GND due to stuck port clock   ;
-; uart:xbee|s[20,21]                     ; Stuck at VCC due to stuck port clock   ;
-; uart:xbee|s[22..26]                    ; Stuck at GND due to stuck port clock   ;
-; uart:xbee|s[27..29]                    ; Stuck at VCC due to stuck port clock   ;
-; uart:xbee|s[30,31]                     ; Stuck at GND due to stuck port clock   ;
-; uart:xbee|packetState[0,1]             ; Stuck at VCC due to stuck port clock   ;
-; uart:xbee|packetState[2]               ; Stuck at GND due to stuck port clock   ;
-; uart:xbee|packetState[3]               ; Stuck at VCC due to stuck port clock   ;
-; uart:xbee|tx_reg                       ; Stuck at VCC due to stuck port clock   ;
-; uart:xbee|currentPacket[0]             ; Stuck at VCC due to stuck port clock   ;
-; uart:xbee|currentPacket[1]             ; Stuck at GND due to stuck port clock   ;
-; uart:xbee|currentPacket[2]             ; Stuck at VCC due to stuck port clock   ;
-; adc_control:ac|addr[2]                 ; Stuck at VCC due to stuck port data_in ;
-; uart:xbee|state.01                     ; Stuck at GND due to stuck port clock   ;
-; uart:xbee|state.00                     ; Lost fanout                            ;
-; uart:xbee|state.10                     ; Lost fanout                            ;
-; Total Number of Removed Registers = 54 ;                                        ;
-+----------------------------------------+----------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                          ;
-+--------------------+-------------------------+---------------------------------------------------------------------------------------+
-; Register name      ; Reason for Removal      ; Registers Removed due to This Register                                                ;
-+--------------------+-------------------------+---------------------------------------------------------------------------------------+
-; uart:xbee|baud_clk ; Stuck at GND            ; uart:xbee|s[2], uart:xbee|s[1], uart:xbee|s[0], uart:xbee|s[3], uart:xbee|s[4],       ;
-;                    ; due to stuck port clock ; uart:xbee|s[5], uart:xbee|s[6], uart:xbee|s[7], uart:xbee|s[8], uart:xbee|s[9],       ;
-;                    ;                         ; uart:xbee|s[10], uart:xbee|s[11], uart:xbee|s[12], uart:xbee|s[13], uart:xbee|s[14],  ;
-;                    ;                         ; uart:xbee|s[15], uart:xbee|s[16], uart:xbee|s[17], uart:xbee|s[18], uart:xbee|s[19],  ;
-;                    ;                         ; uart:xbee|s[20], uart:xbee|s[21], uart:xbee|s[22], uart:xbee|s[23], uart:xbee|s[24],  ;
-;                    ;                         ; uart:xbee|s[25], uart:xbee|s[26], uart:xbee|s[27], uart:xbee|s[28], uart:xbee|s[29],  ;
-;                    ;                         ; uart:xbee|s[30], uart:xbee|s[31], uart:xbee|packetState[0], uart:xbee|packetState[1], ;
-;                    ;                         ; uart:xbee|packetState[2], uart:xbee|packetState[3], uart:xbee|tx_reg,                 ;
-;                    ;                         ; uart:xbee|currentPacket[0], uart:xbee|currentPacket[1], uart:xbee|currentPacket[2]    ;
-; uart:xbee|state.01 ; Stuck at GND            ; uart:xbee|state.00, uart:xbee|state.10                                                ;
-;                    ; due to stuck port clock ;                                                                                       ;
-+--------------------+-------------------------+---------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; led1                                  ; Stuck at GND due to stuck port data_in ;
+; led2                                  ; Stuck at GND due to stuck port data_in ;
+; led3                                  ; Stuck at GND due to stuck port data_in ;
+; led5                                  ; Stuck at GND due to stuck port data_in ;
+; led6                                  ; Stuck at GND due to stuck port data_in ;
+; led7                                  ; Stuck at GND due to stuck port data_in ;
+; led8                                  ; Stuck at GND due to stuck port data_in ;
+; adc_control:ac|addr[2]                ; Stuck at VCC due to stuck port data_in ;
+; uart:xbee|state.10                    ; Lost fanout                            ;
+; Total Number of Removed Registers = 9 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -299,66 +260,81 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 45    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 98    ;
+; Number of registers using Synchronous Clear  ; 2     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 8     ;
+; Number of registers using Clock Enable       ; 48    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; adc_control:ac|csn                     ; 2       ;
-; adc_control:ac|addr[0]                 ; 4       ;
-; Total number of inverted registers = 2 ;         ;
-+----------------------------------------+---------+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; adc_control:ac|csn                      ; 2       ;
+; uart:xbee|tx_reg                        ; 2       ;
+; adc_control:ac|addr[0]                  ; 4       ;
+; uart:xbee|packetState[3]                ; 8       ;
+; uart:xbee|packetState[0]                ; 6       ;
+; uart:xbee|packetState[1]                ; 7       ;
+; uart:xbee|s[0]                          ; 1       ;
+; uart:xbee|currentPacket[2]              ; 4       ;
+; uart:xbee|currentPacket[0]              ; 5       ;
+; uart:xbee|s[1]                          ; 1       ;
+; uart:xbee|s[4]                          ; 1       ;
+; uart:xbee|s[6]                          ; 1       ;
+; uart:xbee|s[9]                          ; 1       ;
+; uart:xbee|s[14]                         ; 1       ;
+; uart:xbee|s[16]                         ; 1       ;
+; uart:xbee|s[17]                         ; 1       ;
+; uart:xbee|s[18]                         ; 1       ;
+; uart:xbee|s[20]                         ; 1       ;
+; uart:xbee|s[21]                         ; 1       ;
+; uart:xbee|s[27]                         ; 1       ;
+; uart:xbee|s[28]                         ; 1       ;
+; uart:xbee|s[29]                         ; 1       ;
+; Total number of inverted registers = 22 ;         ;
++-----------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "uart:xbee"                                                                                  ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                             ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; data[29..28] ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; data[25..24] ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; data[21..20] ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; data[17..16] ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; data[14..13] ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; data[6..4]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; data[2..1]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; data[31..30] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; data[27..26] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; data[23..22] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; data[19..18] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; data[10..9]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; data[15]     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; data[12]     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; data[11]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; data[8]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; data[7]      ; Input  ; Info     ; Stuck at GND                                                                        ;
-; data[3]      ; Input  ; Info     ; Stuck at GND                                                                        ;
-; data[0]      ; Input  ; Info     ; Stuck at GND                                                                        ;
-; start        ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; ready        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |ir_test|uart:xbee|s[23]            ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |ir_test|uart:xbee|s[5]             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |ir_test|uart:xbee|currentPacket[2] ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |ir_test|uart:xbee|s[18]            ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |ir_test|uart:xbee|s[0]             ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |ir_test|uart:xbee|state            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "adc_control:ac"                                                                                                      ;
-+------------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port             ; Type   ; Severity ; Details                                                                                                  ;
-+------------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; d_out_ch5[11..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
-; d_out_ch6        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
-; d_out_ch7        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
-; data_frame       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+------------------+--------+----------+----------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uart:xbee"                                                                                                       ;
++--------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                                                  ;
++--------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; start        ; Input  ; Info     ; Stuck at VCC                                                                                             ;
+; data[31..12] ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; ready        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adc_control:ac"                                                                                                ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                  ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; d_out_ch6  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; d_out_ch7  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; data_frame ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -367,21 +343,23 @@ Encoding Type:  One-Hot
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 14                          ;
-; cycloneiii_ff         ; 45                          ;
-;     ENA               ; 8                           ;
-;     plain             ; 37                          ;
-; cycloneiii_lcell_comb ; 66                          ;
-;     arith             ; 22                          ;
-;         2 data inputs ; 22                          ;
-;     normal            ; 44                          ;
+; cycloneiii_ff         ; 98                          ;
+;     ENA               ; 47                          ;
+;     ENA SCLR          ; 1                           ;
+;     SCLR              ; 1                           ;
+;     plain             ; 49                          ;
+; cycloneiii_lcell_comb ; 145                         ;
+;     arith             ; 30                          ;
+;         2 data inputs ; 30                          ;
+;     normal            ; 115                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 10                          ;
-;         4 data inputs ; 26                          ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 28                          ;
+;         3 data inputs ; 28                          ;
+;         4 data inputs ; 52                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 3.48                        ;
+; Average LUT depth     ; 2.75                        ;
 +-----------------------+-----------------------------+
 
 
@@ -400,40 +378,48 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Fri Feb 10 20:56:34 2023
+    Info: Processing started: Fri Feb 10 23:05:17 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off swacchat_bot -c swacchat_bot
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file uart.v
-    Info (12023): Found entity 1: uart File: C:/Users/Hemath Gaddey/Documents/Task4_eyantra/uart.v Line: 20
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file ir_test.v
-    Info (12023): Found entity 1: ir_test File: C:/Users/Hemath Gaddey/Documents/Task4_eyantra/ir_test.v Line: 1
+    Info (12023): Found entity 1: ir_test File: C:/Users/divya/OneDrive/Documents/hemanth_task4_eyamtra/rbsgo/ir_test.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file adc_control.v
-    Info (12023): Found entity 1: adc_control File: C:/Users/Hemath Gaddey/Documents/Task4_eyantra/adc_control.v Line: 22
-Warning (10236): Verilog HDL Implicit Net warning at ir_test.v(49): created implicit net for "ckl_50_" File: C:/Users/Hemath Gaddey/Documents/Task4_eyantra/ir_test.v Line: 49
+    Info (12023): Found entity 1: adc_control File: C:/Users/divya/OneDrive/Documents/hemanth_task4_eyamtra/rbsgo/adc_control.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file uart.v
+    Info (12023): Found entity 1: uart File: C:/Users/divya/OneDrive/Documents/hemanth_task4_eyamtra/rbsgo/uart.v Line: 20
 Info (12127): Elaborating entity "ir_test" for the top level hierarchy
-Info (12128): Elaborating entity "adc_control" for hierarchy "adc_control:ac" File: C:/Users/Hemath Gaddey/Documents/Task4_eyantra/ir_test.v Line: 41
-Warning (10036): Verilog HDL or VHDL warning at adc_control.v(41): object "dout_reg" assigned a value but never read File: C:/Users/Hemath Gaddey/Documents/Task4_eyantra/adc_control.v Line: 41
-Warning (10034): Output port "data_frame" at adc_control.v(32) has no driver File: C:/Users/Hemath Gaddey/Documents/Task4_eyantra/adc_control.v Line: 32
-Info (12128): Elaborating entity "uart" for hierarchy "uart:xbee" File: C:/Users/Hemath Gaddey/Documents/Task4_eyantra/ir_test.v Line: 54
-Warning (10230): Verilog HDL assignment warning at uart.v(65): truncated value with size 32 to match size of target (4) File: C:/Users/Hemath Gaddey/Documents/Task4_eyantra/uart.v Line: 65
-Warning (10230): Verilog HDL assignment warning at uart.v(70): truncated value with size 32 to match size of target (4) File: C:/Users/Hemath Gaddey/Documents/Task4_eyantra/uart.v Line: 70
-Warning (10230): Verilog HDL assignment warning at uart.v(74): truncated value with size 32 to match size of target (4) File: C:/Users/Hemath Gaddey/Documents/Task4_eyantra/uart.v Line: 74
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (10036): Verilog HDL or VHDL warning at ir_test.v(19): object "ch5" assigned a value but never read File: C:/Users/divya/OneDrive/Documents/hemanth_task4_eyamtra/rbsgo/ir_test.v Line: 19
+Warning (10036): Verilog HDL or VHDL warning at ir_test.v(46): object "data" assigned a value but never read File: C:/Users/divya/OneDrive/Documents/hemanth_task4_eyamtra/rbsgo/ir_test.v Line: 46
+Warning (10230): Verilog HDL assignment warning at ir_test.v(66): truncated value with size 32 to match size of target (1) File: C:/Users/divya/OneDrive/Documents/hemanth_task4_eyamtra/rbsgo/ir_test.v Line: 66
+Info (12128): Elaborating entity "adc_control" for hierarchy "adc_control:ac" File: C:/Users/divya/OneDrive/Documents/hemanth_task4_eyamtra/rbsgo/ir_test.v Line: 42
+Warning (10036): Verilog HDL or VHDL warning at adc_control.v(41): object "dout_reg" assigned a value but never read File: C:/Users/divya/OneDrive/Documents/hemanth_task4_eyamtra/rbsgo/adc_control.v Line: 41
+Warning (10034): Output port "data_frame" at adc_control.v(32) has no driver File: C:/Users/divya/OneDrive/Documents/hemanth_task4_eyamtra/rbsgo/adc_control.v Line: 32
+Info (12128): Elaborating entity "uart" for hierarchy "uart:xbee" File: C:/Users/divya/OneDrive/Documents/hemanth_task4_eyamtra/rbsgo/ir_test.v Line: 54
+Warning (10230): Verilog HDL assignment warning at uart.v(65): truncated value with size 32 to match size of target (4) File: C:/Users/divya/OneDrive/Documents/hemanth_task4_eyamtra/rbsgo/uart.v Line: 65
+Warning (10230): Verilog HDL assignment warning at uart.v(70): truncated value with size 32 to match size of target (4) File: C:/Users/divya/OneDrive/Documents/hemanth_task4_eyamtra/rbsgo/uart.v Line: 70
+Warning (10230): Verilog HDL assignment warning at uart.v(74): truncated value with size 32 to match size of target (4) File: C:/Users/divya/OneDrive/Documents/hemanth_task4_eyamtra/rbsgo/uart.v Line: 74
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "tx_" is stuck at VCC File: C:/Users/Hemath Gaddey/Documents/Task4_eyantra/ir_test.v Line: 7
+    Warning (13410): Pin "led1_" is stuck at GND File: C:/Users/divya/OneDrive/Documents/hemanth_task4_eyamtra/rbsgo/ir_test.v Line: 9
+    Warning (13410): Pin "led2_" is stuck at GND File: C:/Users/divya/OneDrive/Documents/hemanth_task4_eyamtra/rbsgo/ir_test.v Line: 10
+    Warning (13410): Pin "led3_" is stuck at GND File: C:/Users/divya/OneDrive/Documents/hemanth_task4_eyamtra/rbsgo/ir_test.v Line: 11
+    Warning (13410): Pin "led5_" is stuck at GND File: C:/Users/divya/OneDrive/Documents/hemanth_task4_eyamtra/rbsgo/ir_test.v Line: 13
+    Warning (13410): Pin "led6_" is stuck at GND File: C:/Users/divya/OneDrive/Documents/hemanth_task4_eyamtra/rbsgo/ir_test.v Line: 14
+    Warning (13410): Pin "led7_" is stuck at GND File: C:/Users/divya/OneDrive/Documents/hemanth_task4_eyamtra/rbsgo/ir_test.v Line: 15
+    Warning (13410): Pin "led8_" is stuck at GND File: C:/Users/divya/OneDrive/Documents/hemanth_task4_eyamtra/rbsgo/ir_test.v Line: 17
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 94 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 168 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 12 output pins
-    Info (21061): Implemented 80 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4849 megabytes
-    Info: Processing ended: Fri Feb 10 20:56:43 2023
+    Info (21061): Implemented 154 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 4821 megabytes
+    Info: Processing ended: Fri Feb 10 23:05:26 2023
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Total CPU time (on all processors): 00:00:17
 
 

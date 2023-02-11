@@ -19,10 +19,10 @@ Warning: The error due to compatibility will not be entertained.
 //////////////////DO NOT MAKE ANY CHANGES IN MODULE//////////////////
 module uart(
 	input clk_50M,	//50 MHz clock
-	input [31:0]data,
-	input start,
 	output tx,		//UART transmit output
-	output reg ready
+	output reg ready,
+	input [31:0]data,
+	input start
 );
 //////////////////////////WRITE YOUR CODE FROM HERE////////////////////
 reg [31:0] s = 32'b00111000001101110100001001010011; //01010011 01000010 00110111 00111000;
