@@ -2,36 +2,7 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : [
-				{
-					"name" : "adc_cs_n_",
-					"strict" : false
-				},
-				{
-					"name" : "din_",
-					"strict" : false
-				},
-				{
-					"name" : "adc_sck_",
-					"strict" : false
-				},
-				{
-					"name" : "tx_",
-					"strict" : false
-				},
-				{
-					"name" : "led4_",
-					"strict" : false
-				},
-				{
-					"name" : "clk_50_",
-					"strict" : false
-				},
-				{
-					"name" : "dout_",
-					"strict" : false
-				}
-			]
+			"pins" : []
 		}
 	]
 }

@@ -1,0 +1,10 @@
+module motor_test(
+	input clk,
+	output a1,
+	output a2,
+	output b1,
+	output b2
+	);
+	assign b1 = 1;
+	
+	endmodule

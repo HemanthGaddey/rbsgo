@@ -1,5 +1,5 @@
 Flow report for swacchat_bot
-Fri Feb 10 23:05:37 2023
+Sat Feb 11 15:37:25 2023
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Feb 10 23:05:34 2023       ;
+; Flow Status                        ; Successful - Sat Feb 11 15:37:22 2023       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; swacchat_bot                                ;
-; Top-level Entity Name              ; ir_test                                     ;
+; Top-level Entity Name              ; motor_test                                  ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 155 / 22,320 ( < 1 % )                      ;
-;     Total combinational functions  ; 142 / 22,320 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 98 / 22,320 ( < 1 % )                       ;
-; Total registers                    ; 98                                          ;
-; Total pins                         ; 14 / 154 ( 9 % )                            ;
+; Total logic elements               ; 0 / 22,320 ( 0 % )                          ;
+;     Total combinational functions  ; 0 / 22,320 ( 0 % )                          ;
+;     Dedicated logic registers      ; 0 / 22,320 ( 0 % )                          ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 5 / 154 ( 3 % )                             ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 608,256 ( 0 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                             ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/10/2023 23:05:18 ;
+; Start date & time ; 02/11/2023 15:37:06 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; swacchat_bot        ;
 +-------------------+---------------------+
@@ -76,17 +76,17 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 246775578810761.167605051705592        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 1096423004496.167611002603528          ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; ir_test     ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; ir_test     ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; ir_test     ; Top        ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; motor_test  ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; motor_test  ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; motor_test  ; Top        ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --         ;
-; TOP_LEVEL_ENTITY                    ; ir_test                                ; swacchat_bot  ; --          ; --         ;
+; TOP_LEVEL_ENTITY                    ; motor_test                             ; swacchat_bot  ; --          ; --         ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 
 
@@ -95,11 +95,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4821 MB             ; 00:00:17                           ;
-; Fitter               ; 00:00:05     ; 1.1                     ; 6128 MB             ; 00:00:08                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 4686 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4894 MB             ; 00:00:02                           ;
-; Total                ; 00:00:16     ; --                      ; --                  ; 00:00:28                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4719 MB             ; 00:00:08                           ;
+; Fitter               ; 00:00:05     ; 1.0                     ; 6292 MB             ; 00:00:03                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4688 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4893 MB             ; 00:00:01                           ;
+; Total                ; 00:00:16     ; --                      ; --                  ; 00:00:13                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -108,10 +108,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; LAPTOP-6LG3OG35  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; LAPTOP-6LG3OG35  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; LAPTOP-6LG3OG35  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; LAPTOP-6LG3OG35  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-60O6QT7  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-60O6QT7  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-60O6QT7  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-60O6QT7  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
